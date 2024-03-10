@@ -1,10 +1,14 @@
-export type paperlessFetchResponse = paperlessDocumentResponse;
+export type paperlessFetchResponse = paperlessDocumentResponse | paperlessErrorResponse;
 
 export interface paperlessDocumentResponse {
   count: number;
   next?: string;
   previous?: string;
   results: document[];
+}
+
+export interface paperlessErrorResponse {
+  detail: string;
 }
 
 export interface document {
