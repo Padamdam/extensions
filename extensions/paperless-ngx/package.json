@@ -24,18 +24,18 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.45.3",
-    "axios": "^1.2.2",
-    "formdata-node": "^5.0.0",
+    "@raycast/api": "1.69.0",
+    "axios": "1.6.7",
+    "formdata-node": "6.0.3",
     "moment": "^2.29.4"
   },
   "devDependencies": {
     "@types/node": "~16.10.0",
-    "@types/react": "^17.0.28",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
+    "@types/react": "18.2.64",
+    "@typescript-eslint/eslint-plugin": "7.1.1",
+    "@typescript-eslint/parser": "7.1.1",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
     "node-fetch": "^3.2.1",
     "prettier": "^2.5.1",
     "react-devtools": "^4.19.2",
