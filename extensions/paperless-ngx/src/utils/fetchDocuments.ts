@@ -1,6 +1,6 @@
 import {getPreferenceValues, showToast, Toast} from '@raycast/api';
 import fetch from 'node-fetch';
-import {paperlessFetchResponse} from '../models/paperlessResponse.model';
+import { paperlessErrorResponse, paperlessFetchResponse } from "../models/paperlessResponse.model";
 import {Preferences} from '../models/preferences.model';
 
 const {paperlessURL}: Preferences = getPreferenceValues();
@@ -16,6 +16,11 @@ export const fetchDocuments = async (
             }
         );
         const json = await response.json();
+        if (!response.ok) {
+            // If response status is not OK, throw an error
+            await showToast(Toast.Style.Failure, `Could not fetch documents : ${(json as paperlessErrorResponse).detail}`);
+        }
+
         return json as paperlessFetchResponse;
     } catch (error) {
         await showToast(Toast.Style.Failure, `Could not fetch documents ${error}`);
