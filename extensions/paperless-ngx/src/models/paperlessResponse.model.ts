@@ -1,4 +1,6 @@
-export type paperlessFetchResponse = paperlessDocumentResponse | paperlessErrorResponse;
+export type paperlessFetchResponse =
+  | paperlessDocumentResponse
+  | paperlessErrorResponse;
 
 export interface paperlessDocumentResponse {
   count: number;

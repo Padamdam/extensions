@@ -14,7 +14,7 @@ type ExtensionPreferences = {
   "apiToken": string,
   /** Grid Mode - Display documents in Grid instead of List */
   "gridMode": boolean,
-  /** Date format - Select your preferred date format */
+  /** Date format - Choose the date format */
   "dateFormat": "YYYY-MM-DD HH:MM" | "DD.MM.YYYY HH:MM" | "DD/MM/YYYY HH:MM" | "MM/DD/YYYY  hh:MM"
 }
 
@@ -22,15 +22,16 @@ type ExtensionPreferences = {
 declare type Preferences = ExtensionPreferences
 
 declare namespace Preferences {
-  /** Preferences accessible in the `index` command */
-  export type Index = ExtensionPreferences & {}
+  /** Preferences accessible in the `documentsView` command */
+  export type DocumentsView = ExtensionPreferences & {}
   /** Preferences accessible in the `documentForm` command */
   export type DocumentForm = ExtensionPreferences & {}
 }
 
 declare namespace Arguments {
-  /** Arguments passed to the `index` command */
-  export type Index = {}
+  /** Arguments passed to the `documentsView` command */
+  export type DocumentsView = {}
   /** Arguments passed to the `documentForm` command */
   export type DocumentForm = {}
 }
+
